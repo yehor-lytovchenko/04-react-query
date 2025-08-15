@@ -14,7 +14,7 @@ export async function fetchMovies(
   query: string,
   page: number
 ): Promise<MovieResponse> {
-  const { data } = await axios.get<MovieResponse>(`movie?query=${query}`, {
+  const { data } = await axios.get<MovieResponse>("movie", {
     params: { page, query },
   });
   return data;
